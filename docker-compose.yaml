@@ -9,7 +9,7 @@ services:
         source: ./client
         target: /code
     working_dir: /code
-    command: bash -c "npm install && npm run dev"
+    command: bash -c "npm install && npm start"
   api:
     image: node:latest
     working_dir: /code

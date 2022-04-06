@@ -1,0 +1,11 @@
+{
+  "name": "client",
+  "scripts": {
+    "start": "http-server"
+  },
+  "author": "Nowshad & Ikenna",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^14.1.0"
+  }
+}

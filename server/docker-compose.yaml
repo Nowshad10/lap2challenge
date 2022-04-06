@@ -6,11 +6,11 @@ services:
     ports:
       - 3000:3000
     environment:
-    - PGUSER = posts_user
-    - PGPASSWORD = password
-    - PGHOST = db
-    - PGDATABASE = db
-    - PGPORT = 5432
+    - PGUSER=posts_user
+    - PGPASSWORD=posts123
+    - PGHOST=db
+    - PGDATABASE=db
+    - PGPORT=5432
     depends_on:
      - db
     volumes:
@@ -26,6 +26,6 @@ services:
     environment:
       - POSTGRES_DB=posts_db
       - POSTGRES_USER=posts_user
-      - POSTGRES_PASSWORD=password
+      - POSTGRES_PASSWORD=posts123
 volumes:
   dbdata:

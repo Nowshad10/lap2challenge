@@ -24,7 +24,7 @@ services:
       - "dbdata:/var/lib/postgresql/data"
       - "./db:/docker-entrypoint-initdb.d/:ro"
     environment:
-      - POSTGRES_DB=posts_db
+      - POSTGRES_DB=db
       - POSTGRES_USER=posts_user
       - POSTGRES_PASSWORD=posts123
 volumes:

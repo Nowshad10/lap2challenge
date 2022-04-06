@@ -6,8 +6,6 @@ app.use(cors());
 
 app.use(express.json());
 
-const port = process.env.PORT || 3000
-
 const Post = require('./models/Post')
 
 app.get('/', (req, res) => {
@@ -29,7 +27,4 @@ app.get('/posts', async (req, res) => {
 // Post method to create a new post
 
 
-
-app.listen(port, () => {
-    console.log(`App listening on port ${port}!`)
-});
+module.exports = { app }

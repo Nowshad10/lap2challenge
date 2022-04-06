@@ -23,15 +23,17 @@ app.get('/posts', async (req, res) => {
     }
 })
 
+// Get one post
 app.get('/posts/:id', async (req, res) => {
     try {
-        const post = await Post.findById(parseInt(req.params.id))
+        const post = await Post.findById(req.params.id)
         res.status(200).json(post)
     } catch (err) {
        res.status(500).json(err) 
     }
 })
 
+// Post method to create a new post
 app.post('/posts', async (req, res) => {
     try {
         const post = await Post.create(req.body)
@@ -41,9 +43,7 @@ app.post('/posts', async (req, res) => {
     }
 })
 
-// Get one posts
 
-// Post method to create a new post
 
 
 

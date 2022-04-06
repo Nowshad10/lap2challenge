@@ -6,6 +6,7 @@ app.use(cors());
 
 app.use(express.json());
 
+
 const Post = require('./models/Post')
 
 app.get('/', (req, res) => {
@@ -27,4 +28,5 @@ app.get('/posts', async (req, res) => {
 // Post method to create a new post
 
 
-module.exports = { app }
+
+module.exports = app 

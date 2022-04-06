@@ -29,10 +29,9 @@ async function update() {
         document.querySelector("#post-body").textContent = "";
         form.classList.remove("hidden");
         postContent.classList.add("hidden");
-        contentChecker(document.querySelector('#title'))
-        contentChecker(document.querySelector('#author'))
-        //
-        contentChecker(document.querySelector('#body'))
+        fadeClassChecker(document.querySelector('#title'))
+        fadeClassChecker(document.querySelector('#author'))
+        fadeClassChecker(document.querySelector('#body'))
     }
 }
 
@@ -49,7 +48,7 @@ function showPost(data) {
     }
 }
 
-function contentChecker(input) {
+function fadeClassChecker(input) {
     let label = document.querySelector(`.label-${input.id}`);
     if(!input.value){
         label.classList.remove('fade');
@@ -62,11 +61,11 @@ function contentChecker(input) {
 
 document.querySelector("#title").addEventListener('input', updateLabels)
 document.querySelector("#author").addEventListener('input', updateLabels)
-//
+
 document.querySelector("#body").addEventListener('input', updateLabels)
 
 function updateLabels(e) {
-    contentChecker(e.target)
+    fadeClassChecker(e.target)
 };
 
 

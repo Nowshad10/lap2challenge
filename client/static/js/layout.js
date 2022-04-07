@@ -11,9 +11,9 @@ const form = document.getElementById('form');
 const postContent = document.querySelector('#post');
 
 async function update() {
-    let hash = window.location.hash.substring(1);
-    if (hash) {
-        let data = await getPost(hash);
+    let id = window.location.hash.substring(1);
+    if (id) {
+        let data = await getPost(id);
         form.classList.add("hidden");
         postContent.classList.remove("hidden")
         if (typeof data !== 'undefined') {

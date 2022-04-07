@@ -10,7 +10,7 @@ app.use(express.json());
 const Post = require('./models/Post')
 
 app.get('/', (req, res) => {
-    res.send('Hello World!')
+    res.send('Welcome to this API!')
 });
 
 // Get all posts
